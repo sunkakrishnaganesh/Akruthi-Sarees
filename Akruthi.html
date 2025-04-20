@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akruthi Sarees - Grace in Every Drape</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --maroon: #800020;
+            --gold: #D4AF37;
+            --royal-blue: #0F52BA;
+            --ivory: #FFFFF0;
+            --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f9f5f0;
+            position: relative;
+            padding-top: 80px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--maroon);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            z-index: 1000;
+            box-shadow: var(--soft-shadow);
+        }
+        
+        .logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 28px;
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Banner */
+        .hero-banner {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(128, 0, 32, 0.6), rgba(128, 0, 32, 0.4)), 
+                        url('https://res.cloudinary.com/djontsvk9/image/upload/v1744957790/Akruthi%20Saree/pexels-manjeet-singh-yadav-462762-1162983_1_giugsl.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--gold);
+            color: var(--maroon);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+        
+        /* Saree Collection */
+        .collection-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--maroon);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--gold);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .saree-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .saree-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .saree-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .saree-img {
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .saree-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .saree-card:hover .saree-img img {
+            transform: scale(1.05);
+        }
+        
+        .saree-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .saree-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--maroon);
+        }
+        
+        .saree-info .price {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .shop-btn {
+            display: inline-block;
+            padding: 8px 25px;
+            background-color: var(--maroon);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .shop-btn:hover {
+            background-color: var(--gold);
+            color: var(--maroon);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            background-color: #128C7E;
+        }
+        
+        .whatsapp-btn i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .whatsapp-text {
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--maroon);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        /*updated code here */
+        .location-contact {
+            background-color: var(--ivory);
+            padding: 60px 0;
+        }
+        
+        .location-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .map-container, .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+        }
+        
+        .contact-info {
+            padding: 20px;
+        }
+        
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--maroon);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            color: var(--gold);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .contact-text h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--maroon);
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p {
+            color: #555;
+        }
+        /*Qr code selection */
+        .qr-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+        
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .qr-image, .qr-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .qr-image {
+            text-align: center;
+        }
+        
+        .qr-image img {
+            width: 220px;
+            height: 220px;
+            border: 10px solid var(--ivory);
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+        }
+        
+        .qr-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--maroon);
+            margin-bottom: 20px;
+        }
+        
+        .qr-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .qr-features {
+            list-style: none;
+        }
+        
+        .qr-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .qr-features i {
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .qr-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .qr-features {
+                padding-left: 0;
+            }
+            
+            .qr-features li {
+                justify-content: center;
+            }
+        }
+        /* Sarees Slide Show */
+        .slideshow-section {
+            padding: 40px 0;
+            background-color: #f9f5f0;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .saree-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(128, 0, 32, 0.7);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        /* About Us Section */
+        .about-section {
+            padding: 60px 0;
+            background-color: var(--ivory);
+            position: relative;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-image, .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--maroon);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            color: var(--gold);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-content {
+                text-align: center;
+            }
+            
+            .about-content h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .feature-item {
+                justify-content: center;
+            }
+        }
+        /* Compact Saree Slideshow */
+        .slideshow-section {
+            padding: 30px 0;
+            background-color: #f9f5f0;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px; /* More contained width */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .saree-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 500px; /* Reduced height */
+            object-fit: cover;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(128, 0, 32, 0.7);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            white-space: nowrap;
+        }
+        
+        /* Navigation arrows - made slightly smaller */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(212, 175, 55, 0.7);
+            color: var(--maroon);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .prev {
+            left: 15px;
+        }
+        
+        .next {
+            right: 15px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: var(--gold);
+        }
+        
+        /* Dots navigation - made more compact */
+        .dots-container {
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: var(--maroon);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slideshow-container {
+                max-width: 95%;
+            }
+            
+            .slide img {
+                height: 400px;
+            }
+            
+            .slide-caption {
+                font-size: 1rem;
+                padding: 8px 15px;
+                bottom: 15px;
+            }
+            
+            .prev, .next {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide img {
+                height: 4000px;
+            }
+            
+            .slide-caption {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+        /* Navigation arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.7);
+            color: var(--maroon);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .prev {
+            left: 20px;
+        }
+        
+        .next {
+            right: 20px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: var(--gold);
+        }
+        
+        /* Dots navigation */
+        .dots-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: var(--maroon);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slide img {
+                height: 60vh;
+            }
+            
+            .slide-caption {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                bottom: 20px;
+            }
+            
+            .prev, .next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+        /* Update footer to be below this section */
+        footer {
+            margin-top: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .location-container {
+                flex-direction: column;
+            }
+            
+            .map-container, .contact-info {
+                min-width: 100%;
+            }
+        }
+        
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .saree-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px;
+            }
+            
+            .whatsapp-text {
+                display: none;
+            }
+        }
+        /* Privacy Policy Section */
+        .privacy-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .privacy-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            color: var(--maroon);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .privacy-content {
+            background-color: #f9f5f0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+        }
+        
+        .privacy-point {
+            margin-bottom: 25px;
+        }
+        
+        .privacy-point h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--maroon);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .privacy-point h3 i {
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .privacy-point p {
+            line-height: 1.7;
+            color: #555;
+            padding-left: 28px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 20px;
+            }
+            
+            .privacy-point h3 {
+                font-size: 1.1rem;
+            }
+            
+            .privacy-point p {
+                padding-left: 0;
+            }
+        }
+        /* Updated Footer */
+        footer {
+            background-color: var(--maroon);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .owners {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            padding: 15px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            width: 80%;
+            max-width: 500px;
+        }
+        
+        .owners p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+        
+        .footer-links li {
+            margin: 0 15px 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-logo {
+                font-size: 28px;
+            }
+            
+            .owners {
+                width: 90%;
+                font-size: 0.9rem;
+            }
+            
+            .footer-links li {
+                margin: 0 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navba">
+        <div class="logo"id="navba">Akruthi Sarees</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#collection">Shop</a></li>
+            <li><a href="#Aboutus">About Us</a></li>
+            <li><a href="tel:+919963641032">
+                📞 Contact
+              </a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Akruthi Sarees</h1>
+            <p>Grace in Every Drape</p>
+            <a href="#collection" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+    <!-- Slide Show -->
+    <section class="slideshow-section">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="saree-slides">
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745140197/Akruthi%20Saree/ChatGPT_Image_Apr_20_2025_01_19_10_PM_qndmon.jpg" alt="Kanjivaram Silk Saree">
+                        <div class="slide-caption">Kanjivaram Silk</div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745139667/Akruthi%20Saree/222_tzttgm.jpg" alt="Banarasi Silk Saree">
+                        <div class="slide-caption">Banarasi Silk</div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745139667/Akruthi%20Saree/111_1_ke3tdn.jpg" alt="Chiffon Casual Saree">
+                        <div class="slide-caption">Chiffon Casual</div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745139667/Akruthi%20Saree/333_x7zony.jpg" alt="Chanderi Silk Saree">
+                        <div class="slide-caption">Chanderi Silk</div>
+                    </div>
+                    <!--Slide 5-->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1744957790/Akruthi%20Saree/pexels-manjeet-singh-yadav-462762-1162983_1_giugsl.jpg" alt="Chanderi Silk Saree">
+                        <div class="slide-caption">Chanderi Silk</div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+            
+            <!-- Dots navigation -->
+            <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Saree Collection -->
+    <section class="collection-section" id="collection">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Exquisite Collection</h2>
+            </div>
+            <div class="saree-grid">
+                <!-- Saree Card 1 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745135717/Akruthi%20Saree/daily_wear_vxrwcs.jpg" alt="Kanjivaram Silk Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Daily Wear Sarees</h3>
+                        <div class="price">₹250/-</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Saree Card 2 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745134659/Akruthi%20Saree/banaras_sare_zjadng.jpg" alt="Banarasi Silk Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Banarasi Sarees</h3>
+                        <div class="price">₹2,500/-</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Saree Card 3 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745134659/Akruthi%20Saree/fansy_svcfgx.jpg" alt="Linen Cotton Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Fancy Sarees</h3>
+                        <div class="price">₹500</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Saree Card 4 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745134660/Akruthi%20Saree/pochampally_kets9t.jpg" alt="Chanderi Silk Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Pochampally Sarees</h3>
+                        <div class="price">₹800</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Saree Card 5 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745134660/Akruthi%20Saree/handloom_sares_ci5esa.jpg" alt="Tussar Silk Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Handloom Sarees</h3>
+                        <div class="price">₹1,200/-</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Saree Card 6 -->
+                <div class="saree-card">
+                    <div class="saree-img">
+                        <img src="https://res.cloudinary.com/djontsvk9/image/upload/c_pad,w_400,h_400/v1745134659/Akruthi%20Saree/pattu_ckb7ea.jpg" alt="Printed Georgette Saree">
+                    </div>
+                    <div class="saree-info">
+                        <h3>Pattu Sarees</h3>
+                        <div class="price">₹2,000-₹5,000</div>
+                        <a href="https://chat.whatsapp.com/I7ZeXtHPaqJ03VWwByhwpu" class="shop-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Us-->
+    <section class="about-section"id="Aboutus">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745141096/Akruthi%20Saree/about_us_pv48zn.jpg" alt="Akruthi Sarees Store">
+                </div>
+                <div class="about-content">
+                    <h2>About Akruthi Sarees</h2>
+                    <p>Founded in 2024, Akruthi Sarees is a celebration of India's rich textile heritage. We curate exquisite handcrafted sarees from across the country, bringing you authentic weaves with contemporary elegance.</p>
+                    <p>Our name 'Akruthi' means 'form' or 'expression' in Sanskrit, representing how each saree in our collection is a unique expression of artistry and tradition.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4>Authentic Handlooms</h4>
+                                <p>Directly sourced from weaver communities across India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4>Curated Collections</h4>
+                                <p>Carefully selected for quality, craftsmanship and design</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div>
+                                <h4>Ethical Fashion</h4>
+                                <p>Supporting sustainable practices and artisan livelihoods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Qr code section Start-->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-container">
+                <div class="qr-image">
+                    <!-- Replace with your actual QR code image -->
+                    <img src="https://res.cloudinary.com/djontsvk9/image/upload/v1745134547/Akruthi%20Saree/URL_QR_Code_d63w8c.png" alt="Akruthi Sarees QR Code">
+                </div>
+                <div class="qr-content">
+                    <h3>Digital Convenience at Your Fingertips</h3>
+                    <p>Scan the QR code to view our catalog, make payments, or get directions instantly!</p>
+                    <ul class="qr-features">
+                        <li><i class="fas fa-check-circle"></i> Browse our latest collections</li>
+                        <li><i class="fas fa-check-circle"></i> Quick digital payments</li>
+                        <li><i class="fas fa-check-circle"></i> Get directions to our store</li>
+                        <li><i class="fas fa-check-circle"></i> Access special offers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Qr code section end-->
+    <section class="location-contact">
+        <div class="container">
+            <div class="location-container">
+                <!-- Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d224.35407812492082!2d78.70507982210707!3d18.819330985531987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQ5JzA5LjUiTiA3OMKwNDInMTguOCJF!5e1!3m2!1sen!2sin!4v1745136509985!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Visit Our Store</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Akruthi Sarees</h4>
+                                <p>4-1-992/1, Balaji Road, Korutla, Telangana – 505326</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 9963641032</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Open Hours</h4>
+                                <p>Mon–Sat: 10AM – 8PM<br>Sunday: 10AM - 10PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--privacy policy-->
+    <section class="privacy-section" id="privacy">
+        <div class="privacy-container">
+            <h2>Privacy Policy</h2>
+            <div class="privacy-content">
+                <div class="privacy-point">
+                    <h3><i class="fas fa-shield-alt"></i> Information Collection</h3>
+                    <p>We collect personal information when you make a purchase, create an account, or contact us. This may include your name, email address, phone number, shipping address, and payment details. We use this information solely to process your orders and enhance your shopping experience.</p>
+                </div>
+                
+                <div class="privacy-point">
+                    <h3><i class="fas fa-lock"></i> Data Security</h3>
+                    <p>Your personal information is protected through SSL encryption on our website. We implement industry-standard security measures and never store your complete payment details. All transactions are processed through secure payment gateways.</p>
+                </div>
+                
+                <div class="privacy-point">
+                    <h3><i class="fas fa-envelope"></i> Communication</h3>
+                    <p>We may use your contact information to send order updates, respond to inquiries, and occasionally share promotions. You can unsubscribe from marketing emails at any time using the link provided in each email.</p>
+                </div>
+                
+                <div class="privacy-point">
+                    <h3><i class="fas fa-cookie"></i> Cookies & Tracking</h3>
+                    <p>Our website uses cookies to improve functionality and analyze site traffic. These help us understand customer preferences and enhance your browsing experience. You can disable cookies in your browser settings.</p>
+                </div>
+                
+                <div class="privacy-point">
+                    <h3><i class="fas fa-user-shield"></i> Your Rights</h3>
+                    <p>You have the right to access, correct, or delete your personal information. For any privacy-related requests, please contact us at privacy@akruthisarees.com. We may update this policy periodically, with changes posted on this page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Akruthi Sarees</div>
+                <div class="owners">
+                    <p>Proprietors:</p>
+                    <p><i class="fas fa-user-circle" style="color: var(--gold);"></i> Shanigaram Mamatha</p>
+                    <p><i class="fas fa-user-circle" style="color: var(--gold);"></i> Sunka Rajitha</p>
+                <ul class="footer-links">
+                    <li><a href="#navba">Home</a></li>
+                    <li><a href="#collection">Shop</a></li>
+                    <li><a href="#Aboutus">About Us</a></li>
+                    <li><a href="tel:+919963641032">
+                        📞 Call Us Now
+                      </a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Akruthi Sarees. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919963641032" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky navigation on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '10px 5%';
+                navbar.style.background = 'rgba(128, 0, 32, 0.95)';
+            } else {
+                navbar.style.padding = '15px 5%';
+                navbar.style.background = 'var(--maroon)';
+            }
+        });
+
+        // Mobile menu toggle (would need additional HTML for mobile menu)
+        // This is just a placeholder for future implementation
+        function toggleMobileMenu() {
+            // Implementation for mobile menu would go here
+        }
+        //Slide Show Functionality
+        // Slideshow functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.saree-slides');
+            const slideItems = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentIndex = 0;
+            let slideInterval;
+            const slideCount = slideItems.length;
+            
+            // Set initial position
+            function updateSlide() {
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlide();
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlide();
+            }
+            
+            // Auto-play
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 3000);
+            }
+            
+            // Manual navigation
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetInterval();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetInterval();
+            });
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlide();
+                    resetInterval();
+                });
+            });
+            
+            // Reset interval when manually navigating
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startSlideShow();
+            }
+            
+            // Start the slideshow
+            startSlideShow();
+            
+            // Pause on hover
+            const slideshow = document.querySelector('.slideshow-container');
+            slideshow.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slideshow.addEventListener('mouseleave', () => {
+                startSlideShow();
+            });
+        });
+    </script>
+</body>
+</html>
